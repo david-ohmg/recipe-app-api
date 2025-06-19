@@ -9,7 +9,6 @@ from django.test import Client
 
 class AdminSiteTests(TestCase):
     """Test for Django admin"""
-    
     def setUp(self):
         """Create user and client"""
         self.client = Client()
