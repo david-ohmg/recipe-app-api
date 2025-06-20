@@ -69,8 +69,8 @@ class PublicUserApiTests(TestCase):
     def test_create_token_for_user(self):
         """Test generates tokens for valid credentials"""
         user_details = {
-            'name': 'Test Name', 
-            'email': 'test@example.com', 
+            'name': 'Test Name',
+            'email': 'test@example.com',
             'password': 'test-user-password123',
         }
         create_user(**user_details)
@@ -114,8 +114,8 @@ class PrivateUserApiTests(TestCase):
 
     def setUp(self):
         self.user = create_user(
-            email='test@example.com', 
-            password='testpass123', 
+            email='test@example.com',
+            password='testpass123',
             name='test_name'
         )
         self.client = APIClient()
