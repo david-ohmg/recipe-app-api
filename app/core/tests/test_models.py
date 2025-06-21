@@ -53,7 +53,7 @@ class ModelTests(TestCase):
     def test_create_recipe(self):
         """Test creating recipe is successful"""
         user = get_user_model().objects.create_user(
-            'test@example.com', 
+            'test@example.com',
             'testpass123'
         )
         recipe = models.Recipe.objects.create(
