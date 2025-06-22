@@ -131,6 +131,9 @@ class PrivateIngredientsApiTests(TestCase):
             price=Decimal('4.00'),
             user=self.user,
         )
+        recipe1.ingredients.add(ing)
+        recipe2.ingredients.add(ing)
+        
         res = self.client.get(INGREDIENTS_URL, {'assigned_only': 1})
         
         self.assertEqual(len(res.data), 1)
